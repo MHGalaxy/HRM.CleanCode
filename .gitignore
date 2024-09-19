@@ -1,4 +1,4 @@
 # Ignore bin and obj directories
-**/bin/
-**/obj/
+HRM.Application/bin/
+HRM.Application/obj/
 /.vs
