@@ -1,0 +1,13 @@
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\bin\Debug\netstandard2.1\HRM.Application.deps.json
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\bin\Debug\netstandard2.1\HRM.Application.dll
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\bin\Debug\netstandard2.1\HRM.Application.pdb
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\bin\Debug\netstandard2.1\HRM.Domain.dll
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\bin\Debug\netstandard2.1\HRM.Domain.pdb
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\obj\Debug\netstandard2.1\HRM.Application.csproj.AssemblyReference.cache
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\obj\Debug\netstandard2.1\HRM.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\obj\Debug\netstandard2.1\HRM.Application.AssemblyInfoInputs.cache
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\obj\Debug\netstandard2.1\HRM.Application.AssemblyInfo.cs
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\obj\Debug\netstandard2.1\HRM.Application.csproj.CoreCompileInputs.cache
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\obj\Debug\netstandard2.1\HRM.Appl.CBCB69CE.Up2Date
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\obj\Debug\netstandard2.1\HRM.Application.dll
+E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Application\obj\Debug\netstandard2.1\HRM.Application.pdb
