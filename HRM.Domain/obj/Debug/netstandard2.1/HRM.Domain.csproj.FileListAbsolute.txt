@@ -1,9 +1,0 @@
-E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Domain\bin\Debug\netstandard2.1\HRM.Domain.deps.json
-E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Domain\bin\Debug\netstandard2.1\HRM.Domain.dll
-E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Domain\bin\Debug\netstandard2.1\HRM.Domain.pdb
-E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Domain\obj\Debug\netstandard2.1\HRM.Domain.GeneratedMSBuildEditorConfig.editorconfig
-E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Domain\obj\Debug\netstandard2.1\HRM.Domain.AssemblyInfoInputs.cache
-E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Domain\obj\Debug\netstandard2.1\HRM.Domain.AssemblyInfo.cs
-E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Domain\obj\Debug\netstandard2.1\HRM.Domain.csproj.CoreCompileInputs.cache
-E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Domain\obj\Debug\netstandard2.1\HRM.Domain.dll
-E:\Learning\Programming\TopLearn (Iman Madaeny)\Asp.NetCore\4_CleanCode\MyProjects\HR_Management\HRM.Domain\obj\Debug\netstandard2.1\HRM.Domain.pdb
