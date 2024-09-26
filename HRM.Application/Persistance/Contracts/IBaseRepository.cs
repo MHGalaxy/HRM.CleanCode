@@ -11,6 +11,7 @@ namespace HRM.Application.Persistance.Contracts
 
         /// <summary>
         /// برای زمانی که لیست بازگردانده شده لازم به خواندن ندارد
+        /// در این حالت changeTracker فعال نمیشود
         /// </summary>
         Task<IReadOnlyList<T>> GetAll();
         Task<T> Add(T entity);
