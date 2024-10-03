@@ -15,7 +15,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\LeaveType\Handlers\Commands\" />
+    <Folder Include="Features\LeaveAllocations\Handlers\Commands\" />
+    <Folder Include="Features\LeaveAllocations\Requests\Commands\" />
+    <Folder Include="Features\LeaveRequests\Handlers\Commands\" />
+    <Folder Include="Features\LeaveRequests\Requests\Commands\" />
+    <Folder Include="Features\LeaveTypes\Handlers\Commands\" />
+    <Folder Include="Features\LeaveTypes\Requests\Commands\" />
+    <Folder Include="Features\TestFeature\Handlers\Commands\" />
+    <Folder Include="Features\TestFeature\Handlers\Queries\" />
+    <Folder Include="Features\TestFeature\Requests\Commands\" />
+    <Folder Include="Features\TestFeature\Requests\Queries\" />
   </ItemGroup>
 
 </Project>

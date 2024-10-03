@@ -11,7 +11,7 @@ namespace HRM.Domain
         public int LeaveTypeId { get; set; }
         public DateTime RequestDate { get; set; }
         public int RequestComment { get; set; }
-        public DateTime ActionDate { get; set; }
+        public DateTime? ReactionDate { get; set; }
         public bool? Aproved { get; set; }
         public bool Canceled { get; set; }
     }
