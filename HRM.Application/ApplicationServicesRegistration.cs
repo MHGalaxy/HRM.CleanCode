@@ -1,4 +1,5 @@
-﻿using HRM.Application.Profiles;
+﻿using HRM.Application.Persistance.Contracts;
+using HRM.Application.Profiles;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace HRM.Application
         {
             //services.AddAutoMapper(typeof(MappingProfile)); // for one profile
             services.AddAutoMapper(Assembly.GetExecutingAssembly()); // register all profile with assembly
+            //services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>();
         }
     }
 }
