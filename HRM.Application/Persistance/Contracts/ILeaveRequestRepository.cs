@@ -1,4 +1,4 @@
-﻿using HRM.Domain;
+﻿using HRM.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

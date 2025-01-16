@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using HRM.Application.DTOs.LeaveAllocation;
-using HRM.Application.DTOs.LeaveRequest;
-using HRM.Application.DTOs.LeaveType;
-using HRM.Domain;
+using HRM.Domain.DTOs.LeaveAllocation;
+using HRM.Domain.DTOs.LeaveRequest;
+using HRM.Domain.DTOs.LeaveType;
+using HRM.Domain.Entities;
 
 namespace HRM.Application.Profiles
 {
@@ -11,8 +11,11 @@ namespace HRM.Application.Profiles
         public MappingProfile()
         {
             CreateMap<LeaveType,LeaveTypeDTO>().ReverseMap();
+            CreateMap<LeaveType,CreateLeaveTypeDTO>().ReverseMap();
             CreateMap<LeaveRequest,LeaveRequestDTO>().ReverseMap();
+            CreateMap<LeaveRequest,CreateLeaveRequestDTO>().ReverseMap();
             CreateMap<LeaveAllocation, LeaveAllocationDTO>().ReverseMap();
+            CreateMap<LeaveAllocation, CreateLeaveAllocationDTO>().ReverseMap();
         }
     }
 }

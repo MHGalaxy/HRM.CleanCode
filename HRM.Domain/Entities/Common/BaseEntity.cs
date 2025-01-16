@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HRM.Domain.Common
+namespace HRM.Domain.Entities.Common
 {
     public abstract class BaseEntity //abstract is for not to create instance of the class
     {

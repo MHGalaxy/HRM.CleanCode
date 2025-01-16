@@ -1,13 +1,15 @@
-﻿using System;
-using HRM.Domain.Common;
+﻿using HRM.Domain.DTOs.Common;
+using HRM.Domain.DTOs.LeaveType;
+using HRM.Domain;
+using System;
 
-namespace HRM.Domain
+namespace HRM.Domain.DTOs.LeaveRequest
 {
-    public class LeaveRequest : BaseEntity
+    public class LeaveRequestDTO : BaseDTO
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public LeaveType LeaveType { get; set; }
+        public LeaveTypeDTO LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
         public DateTime RequestDate { get; set; }
         public int RequestComment { get; set; }

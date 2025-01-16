@@ -1,4 +1,4 @@
-﻿using HRM.Domain;
+﻿using HRM.Domain.Entities;
 
 namespace HRM.Application.Persistance.Contracts
 {

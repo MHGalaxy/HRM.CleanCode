@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HRM.Application.DTOs.Common
+namespace HRM.Domain.DTOs.Common
 {
     public class BaseDTO
     {

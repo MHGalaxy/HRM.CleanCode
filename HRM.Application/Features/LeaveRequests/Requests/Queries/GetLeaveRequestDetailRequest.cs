@@ -1,4 +1,4 @@
-﻿using HRM.Application.DTOs.LeaveRequest;
+﻿using HRM.Domain.DTOs.LeaveRequest;
 using MediatR;
 
 namespace HRM.Application.Features.LeaveRequests.Requests.Queries

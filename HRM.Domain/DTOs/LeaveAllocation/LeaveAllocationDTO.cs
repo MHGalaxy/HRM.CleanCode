@@ -1,8 +1,8 @@
-﻿using HRM.Application.DTOs.Common;
-using HRM.Application.DTOs.LeaveType;
+﻿using HRM.Domain.DTOs.Common;
+using HRM.Domain.DTOs.LeaveType;
 using HRM.Domain;
 
-namespace HRM.Application.DTOs.LeaveAllocation
+namespace HRM.Domain.DTOs.LeaveAllocation
 {
     public class LeaveAllocationDTO : BaseDTO
     {

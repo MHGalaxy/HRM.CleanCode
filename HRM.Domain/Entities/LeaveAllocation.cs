@@ -1,6 +1,6 @@
-﻿using HRM.Domain.Common;
+﻿using HRM.Domain.Entities.Common;
 
-namespace HRM.Domain
+namespace HRM.Domain.Entities
 {
     public class LeaveAllocation : BaseEntity
     {
