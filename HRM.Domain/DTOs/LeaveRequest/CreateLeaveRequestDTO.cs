@@ -1,8 +1,5 @@
 ﻿using HRM.Domain.DTOs.Common;
-using HRM.Domain.DTOs.LeaveType;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HRM.Domain.DTOs.LeaveRequest
 {

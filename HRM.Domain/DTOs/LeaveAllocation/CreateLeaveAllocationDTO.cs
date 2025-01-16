@@ -1,7 +1,4 @@
 ﻿using HRM.Domain.DTOs.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HRM.Domain.DTOs.LeaveAllocation
 {
