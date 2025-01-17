@@ -23,7 +23,7 @@ namespace HRM.Application.Features.LeaveRequests.Handlers.Commands
 
         public async Task<int> Handle(CreateLeaveRequestCommand request, CancellationToken cancellationToken)
         {
-            var leaveRequest = _mapper.Map<LeaveRequest>(request.LeaveRequestDTO);
+            var leaveRequest = _mapper.Map<LeaveRequest>(request.CreateLeaveRequestDTO);
             leaveRequest = await _leaveRequestRepository.Add(leaveRequest);
             return leaveRequest.Id;
         }

@@ -8,5 +8,6 @@ namespace HRM.Application.Persistance.Contracts
     {
         Task<LeaveRequest> GetLeaveRequestWithDetails(int id);
         Task<List<LeaveRequest>> GetLeaveRequestsWithDetails();
+        Task ChangeApprovedStatus(LeaveRequest leaveRequest, bool? status);
     }
 }

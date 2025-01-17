@@ -12,10 +12,13 @@ namespace HRM.Application.Profiles
         {
             CreateMap<LeaveType,LeaveTypeDTO>().ReverseMap();
             CreateMap<LeaveType,CreateLeaveTypeDTO>().ReverseMap();
+            CreateMap<LeaveType,UpdateLeaveTypeDTO>().ReverseMap();
             CreateMap<LeaveRequest,LeaveRequestDTO>().ReverseMap();
             CreateMap<LeaveRequest,CreateLeaveRequestDTO>().ReverseMap();
+            CreateMap<LeaveRequest, UpdateLeaveRequestDTO>().ReverseMap();
             CreateMap<LeaveAllocation, LeaveAllocationDTO>().ReverseMap();
             CreateMap<LeaveAllocation, CreateLeaveAllocationDTO>().ReverseMap();
+            CreateMap<LeaveAllocation, UpdateLeaveAllocationDTO>().ReverseMap();
         }
     }
 }

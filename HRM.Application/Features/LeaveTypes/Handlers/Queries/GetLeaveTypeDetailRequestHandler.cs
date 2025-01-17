@@ -3,7 +3,6 @@ using HRM.Domain.DTOs.LeaveType;
 using HRM.Application.Features.LeaveTypes.Requests.Queries;
 using HRM.Application.Persistance.Contracts;
 using MediatR;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
