@@ -1,6 +1,6 @@
-﻿using HRM.Domain.DTOs.Common;
+﻿using HRM.Application.DTOs.Common;
 
-namespace HRM.Domain.DTOs.LeaveAllocation
+namespace HRM.Application.DTOs.LeaveAllocation
 {
     public class UpdateLeaveAllocationDTO : BaseDTO
     {

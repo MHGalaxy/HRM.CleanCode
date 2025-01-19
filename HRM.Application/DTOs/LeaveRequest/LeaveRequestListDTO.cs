@@ -1,8 +1,8 @@
-﻿using HRM.Domain.DTOs.Common;
-using HRM.Domain.DTOs.LeaveType;
+﻿using HRM.Application.DTOs.Common;
+using HRM.Application.DTOs.LeaveType;
 using System;
 
-namespace HRM.Domain.DTOs.LeaveRequest
+namespace HRM.Application.DTOs.LeaveRequest
 {
     public class LeaveRequestListDTO : BaseDTO
     {

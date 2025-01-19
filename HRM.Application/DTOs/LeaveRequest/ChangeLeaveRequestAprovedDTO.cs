@@ -1,6 +1,6 @@
-﻿using HRM.Domain.DTOs.Common;
+﻿using HRM.Application.DTOs.Common;
 
-namespace HRM.Domain.DTOs.LeaveRequest
+namespace HRM.Application.DTOs.LeaveRequest
 {
     public class ChangeLeaveRequestAprovedDTO : BaseDTO
     {

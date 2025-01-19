@@ -1,14 +1,14 @@
-﻿using HRM.Domain.DTOs.Common;
+﻿using HRM.Application.DTOs.Common;
 using System;
 
-namespace HRM.Domain.DTOs.LeaveRequest
+namespace HRM.Application.DTOs.LeaveRequest
 {
-    public class CreateLeaveRequestDTO : BaseDTO
+    public class UpdateLeaveRequestDTO : BaseDTO
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int LeaveTypeId { get; set; }
-        public DateTime RequestDate { get; set; }
         public int RequestComment { get; set; }
+        public bool Canceled { get; set; }
     }
 }

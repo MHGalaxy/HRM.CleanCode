@@ -1,4 +1,4 @@
-﻿using HRM.Domain.DTOs.LeaveAllocation;
+﻿using HRM.Application.DTOs.LeaveAllocation;
 using HRM.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
