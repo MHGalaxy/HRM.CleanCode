@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using HRM.Application.DTOs.LeaveType.Validators;
 using HRM.Application.Features.LeaveTypes.Requests.Commands;
 using HRM.Application.Persistance.Contracts;
 using MediatR;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -20,6 +22,14 @@ namespace HRM.Application.Features.LeaveTypes.Handlers.Commands
 
         public async Task<Unit> Handle(UpdateLeaveTypeCommand request, CancellationToken cancellationToken)
         {
+            var validator = new UpdateLeaveTypeDTOValidator();
+            var validationResult = validator.Validate(request.UpdateLeaveTypeDTO);
+
+            if (!validationResult.IsValid)
+            {
+                throw new Exception();
+            }
+
             var leaveType = await _leaveTypeRepository.Get(request.UpdateLeaveTypeDTO.Id); // for calling change tracker in EF
             _mapper.Map(request.UpdateLeaveTypeDTO, leaveType);
             await _leaveTypeRepository.Update(leaveType);

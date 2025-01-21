@@ -11,19 +11,7 @@ namespace HRM.Application.DTOs.LeaveRequest.Validators
         {
             _leaveTypeRepository = leaveTypeRepository;
 
-            RuleFor(x => x.StartDate)
-                .LessThan(x => x.EndDate).WithMessage("{PropertyName} must be before than {ComparsionValue}");
-
-            RuleFor(x => x.EndDate)
-                .GreaterThan(x => x.StartDate).WithMessage("{PropertyName} must be after than {ComparsionValue}");
-
-            RuleFor(x => x.LeaveTypeId)
-                .GreaterThan(0)
-                .MustAsync(async (id, token) =>
-                {
-                    var leaveTypeExists = await _leaveTypeRepository.Exists(id);
-                    return !leaveTypeExists;
-                }).WithMessage("{PropertyName} doesn't exist.");
+            Include(new BaseLeaveRequestDTOValidator(_leaveTypeRepository));
 
         }
     }
