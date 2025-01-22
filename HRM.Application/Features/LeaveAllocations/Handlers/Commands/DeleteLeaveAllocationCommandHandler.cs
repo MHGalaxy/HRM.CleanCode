@@ -4,6 +4,8 @@ using HRM.Application.Persistance.Contracts;
 using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
+using HRM.Application.Exceptions;
+using HRM.Domain.Entities;
 
 namespace HRM.Application.Features.LeaveAllocations.Handlers.Commands
 {
@@ -21,6 +23,12 @@ namespace HRM.Application.Features.LeaveAllocations.Handlers.Commands
         public async Task<Unit> Handle(DeleteLeaveAllocationCommand request, CancellationToken cancellationToken)
         {
             var leaveAllocation = await _leaveAllocationRepository.Get(request.Id);
+
+            if (leaveAllocation == null)
+            {
+                throw new NotFoundException(nameof(LeaveAllocation), request.Id);
+            }
+
             await _leaveAllocationRepository.Delete(leaveAllocation);
             return Unit.Value;
         }

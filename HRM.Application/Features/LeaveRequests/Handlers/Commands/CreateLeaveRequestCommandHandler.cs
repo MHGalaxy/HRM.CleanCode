@@ -1,12 +1,11 @@
 ﻿using AutoMapper;
 using HRM.Application.DTOs.LeaveRequest.Validators;
+using HRM.Application.Exceptions;
 using HRM.Application.Features.LeaveRequests.Requests.Commands;
 using HRM.Application.Persistance.Contracts;
 using HRM.Domain.Entities;
 using MediatR;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -33,7 +32,7 @@ namespace HRM.Application.Features.LeaveRequests.Handlers.Commands
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var leaveRequest = _mapper.Map<LeaveRequest>(request.CreateLeaveRequestDTO);

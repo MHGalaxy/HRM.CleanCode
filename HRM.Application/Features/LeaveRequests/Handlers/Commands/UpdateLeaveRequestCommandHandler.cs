@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HRM.Application.DTOs.LeaveRequest.Validators;
+using HRM.Application.Exceptions;
 using HRM.Application.Features.LeaveRequests.Requests.Commands;
 using HRM.Application.Persistance.Contracts;
 using MediatR;
@@ -31,7 +32,7 @@ namespace HRM.Application.Features.LeaveRequests.Handlers.Commands
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var leaveRequest = await _leaveRequestRepository.Get(request.Id); // for calling change tracker in EF

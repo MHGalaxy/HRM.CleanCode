@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HRM.Application.DTOs.LeaveType.Validators;
+using HRM.Application.Exceptions;
 using HRM.Application.Features.LeaveTypes.Requests.Commands;
 using HRM.Application.Persistance.Contracts;
 using MediatR;
@@ -27,7 +28,7 @@ namespace HRM.Application.Features.LeaveTypes.Handlers.Commands
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var leaveType = await _leaveTypeRepository.Get(request.UpdateLeaveTypeDTO.Id); // for calling change tracker in EF

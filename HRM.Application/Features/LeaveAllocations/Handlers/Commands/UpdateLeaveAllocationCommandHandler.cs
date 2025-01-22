@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using FluentValidation;
 using HRM.Application.DTOs.LeaveAllocation.Validators;
+using HRM.Application.Exceptions;
 using HRM.Application.Features.LeaveAllocations.Requests.Commands;
 using HRM.Application.Persistance.Contracts;
 using MediatR;
@@ -31,7 +31,7 @@ namespace HRM.Application.Features.LeaveAllocations.Handlers.Commands
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var leaveAllocation = await _leaveAllocationRepository.Get(request.UpdateLeaveAllocationDTO.Id); // for calling change tracker in EF

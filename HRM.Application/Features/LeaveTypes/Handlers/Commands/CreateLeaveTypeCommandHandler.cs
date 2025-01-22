@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using HRM.Application.DTOs.LeaveType.Validators;
 using System;
+using HRM.Application.Exceptions;
 
 namespace HRM.Application.Features.LeaveTypes.Handlers.Commands
 {
@@ -28,7 +29,7 @@ namespace HRM.Application.Features.LeaveTypes.Handlers.Commands
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var leaveType = _mapper.Map<LeaveType>(request.CreateLeaveTypeDTO);
