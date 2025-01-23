@@ -15,9 +15,8 @@ namespace HRM.Application.Persistance.Contracts
         /// </summary>
         Task<IReadOnlyList<T>> GetAll();
         Task<T> Add(T entity);
-        Task<T> Update(T entity);
+        Task Update(T entity);
         Task<bool> Exists(int id);
-        Task Delete(int id);
         Task Delete(T entity);
 
     }
