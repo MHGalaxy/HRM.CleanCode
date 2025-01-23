@@ -6,9 +6,9 @@ namespace HRM.Persistance.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        private readonly AppDbContext _context;
+        private readonly HrmDbContext _context;
 
-        public BaseRepository(AppDbContext context)
+        public BaseRepository(HrmDbContext context)
         {
             _context = context;
         }

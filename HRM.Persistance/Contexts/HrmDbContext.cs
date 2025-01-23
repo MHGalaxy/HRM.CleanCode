@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HRM.Persistance.Contexts
 {
-    public class AppDbContext : DbContext
+    public class HrmDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions options) : base(options)
+        public HrmDbContext(DbContextOptions options) : base(options)
         {
             
         }
@@ -14,7 +14,7 @@ namespace HRM.Persistance.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(HrmDbContext).Assembly);
         }
 
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
