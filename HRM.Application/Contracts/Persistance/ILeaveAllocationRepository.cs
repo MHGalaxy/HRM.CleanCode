@@ -1,9 +1,8 @@
-﻿using HRM.Application.DTOs.LeaveAllocation;
-using HRM.Domain.Entities;
+﻿using HRM.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace HRM.Application.Persistance.Contracts
+namespace HRM.Application.Contracts.Persistance
 {
     public interface ILeaveAllocationRepository : IBaseRepository<LeaveAllocation>
     {

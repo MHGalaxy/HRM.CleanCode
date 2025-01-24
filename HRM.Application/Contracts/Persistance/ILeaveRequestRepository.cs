@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace HRM.Application.Persistance.Contracts
+namespace HRM.Application.Contracts.Persistance
 {
     public interface ILeaveRequestRepository : IBaseRepository<LeaveRequest>
     {

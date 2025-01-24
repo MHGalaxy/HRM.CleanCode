@@ -1,7 +1,7 @@
 ﻿
 
 using FluentValidation;
-using HRM.Application.Persistance.Contracts;
+using HRM.Application.Contracts.Persistance;
 
 namespace HRM.Application.DTOs.LeaveRequest.Validators
 {

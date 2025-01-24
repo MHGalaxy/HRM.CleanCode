@@ -2,7 +2,7 @@
 using HRM.Application.DTOs.LeaveAllocation.Validators;
 using HRM.Application.Exceptions;
 using HRM.Application.Features.LeaveAllocations.Requests.Commands;
-using HRM.Application.Persistance.Contracts;
+using HRM.Application.Contracts.Persistance;
 using HRM.Domain.Entities;
 using MediatR;
 using System;

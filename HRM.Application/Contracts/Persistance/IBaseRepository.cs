@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRM.Application.Persistance.Contracts
+namespace HRM.Application.Contracts.Persistance
 {
     public interface IBaseRepository <T> where T : class
     {

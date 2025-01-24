@@ -1,6 +1,6 @@
 ﻿using HRM.Domain.Entities;
 
-namespace HRM.Application.Persistance.Contracts
+namespace HRM.Application.Contracts.Persistance
 {
     public interface ILeaveTypeRepository : IBaseRepository<LeaveType>
     {

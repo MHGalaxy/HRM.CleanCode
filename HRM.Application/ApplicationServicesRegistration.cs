@@ -1,4 +1,4 @@
-﻿using HRM.Application.Persistance.Contracts;
+﻿using HRM.Application.Contracts.Persistance;
 using HRM.Application.Profiles;
 using Microsoft.Extensions.DependencyInjection;
 using System;

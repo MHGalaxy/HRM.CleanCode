@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using HRM.Application.Features.LeaveAllocations.Requests.Commands;
-using HRM.Application.Persistance.Contracts;
+using HRM.Application.Contracts.Persistance;
 using MediatR;
 using System.Threading.Tasks;
 using System.Threading;

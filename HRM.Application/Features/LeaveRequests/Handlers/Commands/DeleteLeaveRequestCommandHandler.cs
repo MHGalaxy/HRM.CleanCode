@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using HRM.Application.Exceptions;
 using HRM.Application.Features.LeaveRequests.Requests.Commands;
-using HRM.Application.Persistance.Contracts;
+using HRM.Application.Contracts.Persistance;
 using HRM.Domain.Entities;
 using MediatR;
 using System.Threading;
