@@ -10,12 +10,12 @@ namespace HRM.Infrastructure
 {
     public static class InfrastructureServicesRegistration
     {
-        public static IServiceCollection ConfigurePersistanceServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection ConfigureInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<SmtpEmailSetting>(configuration.GetSection("SmtpEmailSetting"));
-            services.Configure<GridEmailSender>(configuration.GetSection("GridEmailSender"));
+            services.Configure<SendGridEmailSetting>(configuration.GetSection("SendGridEmailSetting"));
             services.AddTransient<ISmtpEmailSender, SmtpEmailSender>();
-            services.AddTransient<IGridEmailSender, GridEmailSender>();
+            services.AddTransient<IGridEmailSender, SendGridEmailSender>();
 
             return services;
         }

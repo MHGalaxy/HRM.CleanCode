@@ -8,10 +8,10 @@ using System.Net;
 
 namespace HRM.Infrastructure.Senders
 {
-    public class GridEmailSender : IGridEmailSender
+    public class SendGridEmailSender : IGridEmailSender
     {
         private readonly SendGridEmailSetting _emailSettings;
-        public GridEmailSender(IOptions<SendGridEmailSetting> emailSetting)
+        public SendGridEmailSender(IOptions<SendGridEmailSetting> emailSetting)
         {
             _emailSettings = emailSetting.Value;
         }
