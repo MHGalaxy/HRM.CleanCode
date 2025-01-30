@@ -14,7 +14,6 @@ namespace HRM.Application
         {
             //services.AddAutoMapper(typeof(MappingProfile)); // for one profile
             services.AddAutoMapper(Assembly.GetExecutingAssembly()); // register all profile with assembly
-            //services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>();
         }
     }
 }
