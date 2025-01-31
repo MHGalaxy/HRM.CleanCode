@@ -15,10 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\TestFeature\Handlers\Commands\" />
-    <Folder Include="Features\TestFeature\Handlers\Queries\" />
-    <Folder Include="Features\TestFeature\Requests\Commands\" />
-    <Folder Include="Features\TestFeature\Requests\Queries\" />
+    <Folder Include="Features\HRM\TestFeature\Handlers\Commands\" />
+    <Folder Include="Features\HRM\TestFeature\Handlers\Queries\" />
+    <Folder Include="Features\HRM\TestFeature\Requests\Commands\" />
+    <Folder Include="Features\HRM\TestFeature\Requests\Queries\" />
   </ItemGroup>
 
 </Project>

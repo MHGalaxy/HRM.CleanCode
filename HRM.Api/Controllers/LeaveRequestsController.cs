@@ -1,6 +1,6 @@
 ﻿using HRM.Application.DTOs.HRM.LeaveRequest;
-using HRM.Application.Features.LeaveRequests.Requests.Commands;
-using HRM.Application.Features.LeaveRequests.Requests.Queries;
+using HRM.Application.Features.HRM.LeaveRequests.Requests.Commands;
+using HRM.Application.Features.HRM.LeaveRequests.Requests.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
