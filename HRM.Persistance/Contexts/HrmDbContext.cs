@@ -1,5 +1,5 @@
-﻿using HRM.Domain.Entities;
-using HRM.Domain.Entities.Common;
+﻿using HRM.Domain.Entities.Common;
+using HRM.Domain.Entities.HRM;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 

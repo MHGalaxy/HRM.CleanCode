@@ -1,4 +1,4 @@
-﻿using HRM.Application.DTOs.LeaveAllocation;
+﻿using HRM.Application.DTOs.HRM.LeaveAllocation;
 using MediatR;
 
 namespace HRM.Application.Features.LeaveAllocations.Requests.Commands

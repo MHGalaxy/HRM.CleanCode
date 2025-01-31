@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using HRM.Application.DTOs.LeaveRequest.Validators;
+using HRM.Application.DTOs.HRM.LeaveRequest.Validators;
 using HRM.Application.Exceptions;
 using HRM.Application.Features.LeaveRequests.Requests.Commands;
-using HRM.Application.Contracts.Persistance;
-using HRM.Domain.Entities;
 using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using HRM.Domain.Entities.HRM;
+using HRM.Application.Contracts.Persistance.HRM;
 
 namespace HRM.Application.Features.LeaveRequests.Handlers.Commands
 {

@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using HRM.Application.Exceptions;
 using HRM.Application.Features.LeaveTypes.Requests.Commands;
-using HRM.Application.Contracts.Persistance;
-using HRM.Domain.Entities;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
+using HRM.Domain.Entities.HRM;
+using HRM.Application.Contracts.Persistance.HRM;
 
 namespace HRM.Application.Features.LeaveTypes.Handlers.Commands
 {

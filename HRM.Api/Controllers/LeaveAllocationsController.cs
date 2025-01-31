@@ -1,4 +1,4 @@
-﻿using HRM.Application.DTOs.LeaveAllocation;
+﻿using HRM.Application.DTOs.HRM.LeaveAllocation;
 using HRM.Application.Features.LeaveAllocations.Requests.Commands;
 using HRM.Application.Features.LeaveAllocations.Requests.Queries;
 using MediatR;

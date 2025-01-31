@@ -1,4 +1,5 @@
 ﻿using HRM.Application.Contracts.Persistance;
+using HRM.Application.Contracts.Persistance.HRM;
 using HRM.Persistance.Contexts;
 using HRM.Persistance.Repositories;
 using Microsoft.EntityFrameworkCore;

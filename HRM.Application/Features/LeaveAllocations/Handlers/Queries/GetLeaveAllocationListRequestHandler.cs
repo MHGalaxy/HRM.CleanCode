@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using HRM.Application.DTOs.LeaveAllocation;
 using HRM.Application.Features.LeaveAllocations.Requests.Queries;
-using HRM.Application.Contracts.Persistance;
 using MediatR;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using HRM.Application.DTOs.HRM.LeaveAllocation;
+using HRM.Application.Contracts.Persistance.HRM;
 
 namespace HRM.Application.Features.LeaveAllocations.Handlers.Queries
 {
