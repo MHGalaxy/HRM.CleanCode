@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace HRM.Persistance.Migrations
 {
     /// <inheritdoc />
@@ -17,12 +19,12 @@ namespace HRM.Persistance.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     DefaultDay = table.Column<int>(type: "int", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -39,9 +41,9 @@ namespace HRM.Persistance.Migrations
                     LeaveTypeId = table.Column<int>(type: "int", nullable: false),
                     Priod = table.Column<int>(type: "int", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,7 +53,7 @@ namespace HRM.Persistance.Migrations
                         column: x => x.LeaveTypeId,
                         principalTable: "LeaveTypes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -67,11 +69,11 @@ namespace HRM.Persistance.Migrations
                     RequestComment = table.Column<int>(type: "int", nullable: false),
                     ReactionDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Aproved = table.Column<bool>(type: "bit", nullable: true),
-                    Canceled = table.Column<bool>(type: "bit", nullable: false),
+                    Canceled = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -81,7 +83,16 @@ namespace HRM.Persistance.Migrations
                         column: x => x.LeaveTypeId,
                         principalTable: "LeaveTypes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.InsertData(
+                table: "LeaveTypes",
+                columns: new[] { "Id", "CreatedBy", "DateCreated", "DefaultDay", "LastModifiedBy", "LastModifiedDate", "Name" },
+                values: new object[,]
+                {
+                    { 1, null, new DateTime(2025, 1, 31, 20, 24, 44, 49, DateTimeKind.Local).AddTicks(8610), 10, null, new DateTime(2025, 1, 31, 20, 24, 44, 49, DateTimeKind.Local).AddTicks(8617), "Vacation" },
+                    { 2, null, new DateTime(2025, 1, 31, 20, 24, 44, 49, DateTimeKind.Local).AddTicks(8618), 12, null, new DateTime(2025, 1, 31, 20, 24, 44, 49, DateTimeKind.Local).AddTicks(8619), "Sick" }
                 });
 
             migrationBuilder.CreateIndex(

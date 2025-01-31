@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace HRM.Persistance.Configurations.Entities.Common
 {
-    public class BaseEntityConfiguration : IEntityTypeConfiguration<BaseEntity>
+    public class BaseEntityConfiguration<T> : IEntityTypeConfiguration<T> where T : BaseEntity
     {
-        public void Configure(EntityTypeBuilder<BaseEntity> builder)
+        public void Configure(EntityTypeBuilder<T> builder)
         {
             builder.HasKey(u => u.Id);
 
@@ -16,11 +16,11 @@ namespace HRM.Persistance.Configurations.Entities.Common
             builder.Property(e => e.LastModifiedBy)
                    .HasMaxLength(100);
 
-            // Set DeleteBehavior.Restrict for all foreign keys
+            //Set DeleteBehavior.Restrict for all foreign keys
             foreach (var foreignKey in builder.Metadata.GetForeignKeys())
-            {
-                foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
-            }
+                {
+                    foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
+                }
         }
     }
 }

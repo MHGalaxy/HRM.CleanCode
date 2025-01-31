@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRM.Persistance.Migrations
 {
     [DbContext(typeof(HrmDbContext))]
-    [Migration("20250131104951_SomeOtherConfigs")]
-    partial class SomeOtherConfigs
+    [Migration("20250131170040_AddScheme")]
+    partial class AddScheme
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace HRM.Persistance.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("HRM.Domain.Entities.Common.BaseEntity", b =>
+            modelBuilder.Entity("HRM.Domain.Entities.LeaveAllocation", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,36 +34,16 @@ namespace HRM.Persistance.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
-
                     b.Property<string>("LastModifiedBy")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastModifiedDate")
                         .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BaseEntity");
-
-                    b.HasDiscriminator().HasValue("BaseEntity");
-
-                    b.UseTphMappingStrategy();
-                });
-
-            modelBuilder.Entity("HRM.Domain.Entities.LeaveAllocation", b =>
-                {
-                    b.HasBaseType("HRM.Domain.Entities.Common.BaseEntity");
 
                     b.Property<int>("LeaveTypeId")
                         .HasColumnType("int");
@@ -74,14 +54,20 @@ namespace HRM.Persistance.Migrations
                     b.Property<int>("Priod")
                         .HasColumnType("int");
 
+                    b.HasKey("Id");
+
                     b.HasIndex("LeaveTypeId");
 
-                    b.HasDiscriminator().HasValue("LeaveAllocation");
+                    b.ToTable("LeaveAllocations", "HRM");
                 });
 
             modelBuilder.Entity("HRM.Domain.Entities.LeaveRequest", b =>
                 {
-                    b.HasBaseType("HRM.Domain.Entities.Common.BaseEntity");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<bool?>("Aproved")
                         .HasColumnType("bit");
@@ -91,7 +77,19 @@ namespace HRM.Persistance.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastModifiedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("LeaveTypeId")
@@ -109,46 +107,60 @@ namespace HRM.Persistance.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
+                    b.HasKey("Id");
+
                     b.HasIndex("LeaveTypeId");
 
-                    b.ToTable("BaseEntity", t =>
-                        {
-                            t.Property("LeaveTypeId")
-                                .HasColumnName("LeaveRequest_LeaveTypeId");
-                        });
-
-                    b.HasDiscriminator().HasValue("LeaveRequest");
+                    b.ToTable("LeaveRequests", "HRM");
                 });
 
             modelBuilder.Entity("HRM.Domain.Entities.LeaveType", b =>
                 {
-                    b.HasBaseType("HRM.Domain.Entities.Common.BaseEntity");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("DefaultDay")
                         .HasColumnType("int");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.HasDiscriminator().HasValue("LeaveType");
+                    b.HasKey("Id");
+
+                    b.ToTable("LeaveTypes", "HRM");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LastModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreated = new DateTime(2025, 1, 31, 20, 30, 40, 229, DateTimeKind.Local).AddTicks(5924),
                             DefaultDay = 10,
+                            LastModifiedDate = new DateTime(2025, 1, 31, 20, 30, 40, 229, DateTimeKind.Local).AddTicks(5933),
                             Name = "Vacation"
                         },
                         new
                         {
                             Id = 2,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LastModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreated = new DateTime(2025, 1, 31, 20, 30, 40, 229, DateTimeKind.Local).AddTicks(5935),
                             DefaultDay = 12,
+                            LastModifiedDate = new DateTime(2025, 1, 31, 20, 30, 40, 229, DateTimeKind.Local).AddTicks(5936),
                             Name = "Sick"
                         });
                 });

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRM.Persistance.Migrations
 {
     [DbContext(typeof(HrmDbContext))]
-    [Migration("20250128170554_InitialDatabase")]
+    [Migration("20250131165444_InitialDatabase")]
     partial class InitialDatabase
     {
         /// <inheritdoc />
@@ -34,14 +34,12 @@ namespace HRM.Persistance.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifiedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastModifiedDate")
@@ -75,10 +73,11 @@ namespace HRM.Persistance.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("Canceled")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateCreated")
@@ -88,7 +87,6 @@ namespace HRM.Persistance.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifiedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastModifiedDate")
@@ -125,7 +123,6 @@ namespace HRM.Persistance.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateCreated")
@@ -135,7 +132,6 @@ namespace HRM.Persistance.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("LastModifiedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastModifiedDate")
@@ -143,11 +139,30 @@ namespace HRM.Persistance.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
                     b.ToTable("LeaveTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DateCreated = new DateTime(2025, 1, 31, 20, 24, 44, 49, DateTimeKind.Local).AddTicks(8610),
+                            DefaultDay = 10,
+                            LastModifiedDate = new DateTime(2025, 1, 31, 20, 24, 44, 49, DateTimeKind.Local).AddTicks(8617),
+                            Name = "Vacation"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DateCreated = new DateTime(2025, 1, 31, 20, 24, 44, 49, DateTimeKind.Local).AddTicks(8618),
+                            DefaultDay = 12,
+                            LastModifiedDate = new DateTime(2025, 1, 31, 20, 24, 44, 49, DateTimeKind.Local).AddTicks(8619),
+                            Name = "Sick"
+                        });
                 });
 
             modelBuilder.Entity("HRM.Domain.Entities.LeaveAllocation", b =>
@@ -155,7 +170,7 @@ namespace HRM.Persistance.Migrations
                     b.HasOne("HRM.Domain.Entities.LeaveType", "LeaveType")
                         .WithMany()
                         .HasForeignKey("LeaveTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("LeaveType");
@@ -166,7 +181,7 @@ namespace HRM.Persistance.Migrations
                     b.HasOne("HRM.Domain.Entities.LeaveType", "LeaveType")
                         .WithMany()
                         .HasForeignKey("LeaveTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("LeaveType");

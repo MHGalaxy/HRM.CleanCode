@@ -14,8 +14,14 @@ namespace HRM.Persistance.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Explicitly ignore BaseEntity to prevent it from becoming a table
+            modelBuilder.Ignore<BaseEntity>();
+
             //modelBuilder.ApplyConfigurationsFromAssembly(typeof(HrmDbContext).Assembly);
+
+            // Automatically apply all configurations
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
             base.OnModelCreating(modelBuilder);
         }
 

@@ -8,6 +8,8 @@ namespace HRM.Persistence.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<LeaveAllocation> builder)
         {
+            builder.ToTable("LeaveAllocations", "HRM");
+
             builder.Property(e => e.NumberOfDays).IsRequired();
             builder.Property(e => e.Priod).IsRequired();
 

@@ -8,6 +8,8 @@ namespace HRM.Persistence.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<LeaveRequest> builder)
         {
+            builder.ToTable("LeaveRequests", "HRM");
+
             builder.Property(e => e.StartDate).IsRequired();
             builder.Property(e => e.EndDate).IsRequired();
             builder.Property(e => e.RequestDate).IsRequired();
