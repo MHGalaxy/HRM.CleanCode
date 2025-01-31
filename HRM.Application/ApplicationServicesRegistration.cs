@@ -1,10 +1,5 @@
-﻿using HRM.Application.Contracts.Persistance;
-using HRM.Application.Profiles;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using System.Text;
 
 namespace HRM.Application
 {
@@ -14,6 +9,7 @@ namespace HRM.Application
         {
             //services.AddAutoMapper(typeof(MappingProfile)); // for one profile
             services.AddAutoMapper(Assembly.GetExecutingAssembly()); // register all profile with assembly
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
         }
     }
 }
